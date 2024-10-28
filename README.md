@@ -43,10 +43,9 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/income-management-api.git
+git clone https://github.com/kraiyan/hapi_api.git
 cd income-management-api
 Install Dependencies:
-
 bash
 Copy code
 npm install
