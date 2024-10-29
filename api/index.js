@@ -33,13 +33,13 @@ const init = async () => {
         path: '/users',
         handler: async (request , h) => {
             try {
-                console.log("the hello world",);
+                
                 if(!request.payload){
                     return h.response({ message: "Username and passwords are required" }).code(400);
                 }
                 const { error } = userSchema.validate(request.payload);
                     if (error) {
-                        console.log("the error",error);
+                       
                         return h.response({ message: error.details[0].message }).code(400); // Bad Request
                     }
                 const { username, password } = request.payload;
@@ -66,11 +66,10 @@ const init = async () => {
         },
     });
     await server.start();
-    console.log('Server running on %s', server.info.uri);
+   
 };
 
 process.on('unhandledRejection', (err) => {
-    console.log(err);
     process.exit(1);
 });
 
